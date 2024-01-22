@@ -19,7 +19,7 @@ export default function ProjectCard2() {
                     </div>
                 </div>
                 <div className='proj-txtx'>
-                    <a href="https://github.com/Taiwola/LMS-PORTAL" target='_blank'>Learn More</a>
+                    <a href="https://github.com/Taiwola/LMS-PORTAL" rel="noreferrer" target='_blank'>Learn More</a>
                 </div>
             </div>
         </Col>

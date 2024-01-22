@@ -18,7 +18,7 @@ export default function ProjectCard() {
                     </div>
                 </div>
                 <div className='proj-txtx'>
-                    <a href="https://github.com/Taiwola/yemsats-V2" target='_blank'>Learn More</a>
+                    <a href="https://github.com/Taiwola/yemsats-V2" rel="noreferrer" target='_blank'>Learn More</a>
                 </div>
             </div>
         </Col>

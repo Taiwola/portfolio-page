@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
 import { FaGithub } from "react-icons/fa6"
 
 export default function Footer() {

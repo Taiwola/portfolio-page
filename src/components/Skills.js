@@ -2,7 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel"
 import 'react-multi-carousel/lib/styles.css';
 import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
@@ -37,28 +36,28 @@ export default function Skills() {
                                 <h2>Skills</h2>
                                 <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                     <div className="item">
-                                        <img src={meter1} alt="image" />
+                                        <img src={meter1} alt="" />
                                         <h3>HTML</h3>
                                     </div>
 
                                     <div className="item">
-                                        <img src={meter3} alt="image" />
+                                        <img src={meter3} alt="" />
 
                                         <h3>CSS</h3>
                                     </div>
 
                                     <div className="item">
-                                        <img src={meter3} alt="image" />
+                                        <img src={meter3} alt="" />
                                         <h3>PHP</h3>
                                     </div>
 
                                     <div className="item">
-                                        <img src={meter3} alt="image" />
+                                        <img src={meter3} alt="" />
                                         <h3>JavaScript</h3>
                                     </div>
 
                                     <div className="item">
-                                        <img src={meter3} alt="image" />
+                                        <img src={meter3} alt="" />
                                         <h3>TypeScript</h3>
                                     </div>
                                 </Carousel>

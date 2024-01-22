@@ -17,7 +17,7 @@ export function Banner() {
         }, delta);
 
         return () => { clearInterval(ticker) };
-    }, [text]);
+    }, [text, delta]);
 
     const tick = () => {
         let i = loopNum % toRotate.length;
@@ -66,7 +66,7 @@ export function Banner() {
                                     <p className="justify"><span className="highlighted-text">Country: </span> Nigeria</p>
                                 </Col>
                             </Row>
-                            <a href="https://drive.google.com/file/d/1VFwNzkd1ILVRC5u84O3L98wl6RAis8Pr/view?usp=drive_link" className="custom-link" target="_blank">View Cv</a>
+                            <a href="https://drive.google.com/file/d/1VFwNzkd1ILVRC5u84O3L98wl6RAis8Pr/view?usp=drive_link" rel="noreferrer" className="custom-link" target="_blank">View Cv</a>
                         </div>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
