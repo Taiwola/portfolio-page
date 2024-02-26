@@ -3,6 +3,9 @@ import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import ProjectCard2 from './projectCrd';
 import colorSharp2 from "../assets/img/color-sharp2.png"
+import ProjectCard3 from './projectCard2';
+import ProjectCard4 from './projectCard4';
+import ProjectCard5 from './projectCard5';
 
 export default function Project() {
     return (
@@ -20,9 +23,15 @@ export default function Project() {
                                 <Nav.Item>
                                     <Nav.Link eventKey="second">Tab 2</Nav.Link>
                                 </Nav.Item>
-                                {/* <Nav.Item>
+                                <Nav.Item>
                                     <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                                </Nav.Item> */}
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="fourth">Tab 4</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="fifth">Tab 5</Nav.Link>
+                                </Nav.Item>
                             </Nav>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
@@ -36,11 +45,21 @@ export default function Project() {
                                         <ProjectCard2 />
                                     </Row>
                                 </Tab.Pane>
-                                {/* <Tab.Pane eventKey="third">
+                                <Tab.Pane eventKey="third">
                                     <Row>
-                                        <ProjectCard />
+                                        <ProjectCard3 />
                                     </Row>
-                                </Tab.Pane> */}
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="fourth">
+                                    <Row>
+                                        <ProjectCard4 />
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="fifth">
+                                    <Row>
+                                        <ProjectCard5 />
+                                    </Row>
+                                </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
