@@ -174,7 +174,7 @@ export default function Project() {
                             <Tab.Pane eventKey={tab.key} key={tab.key}>
                                 <Row className="justify-content-center">
                                     <Col xs={12} className="text-center mb-3">
-                                        <small className="text-muted">
+                                        <small>
                                             Hover or click the card below to view or visit the project.
                                         </small>
                                     </Col>
