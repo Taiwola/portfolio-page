@@ -69,7 +69,7 @@ export function Banner() {
                             <a href="https://drive.google.com/file/d/1PkNVmqot7IiJyv-QrJmvn5hyQdgXQkhg/view?usp=sharing" rel="noreferrer" className="custom-link" target="_blank">View Cv</a>
                         </div>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={5} className="d-none d-md-block">
                         <img src={headerImg} alt="Header Img" />
                     </Col>
                 </Row>

@@ -155,9 +155,10 @@ export default function Project() {
                 <Row className="mb-4">
                     <Col>
                         <h2 className="text-center mb-2" style={{ fontWeight: 700, letterSpacing: 1 }}>Projects</h2>
-                        <p className="text-center text-muted mb-4" style={{ maxWidth: 600, margin: '0 auto' }}>
+                        <p className="text-center mb-4" style={{ maxWidth: 600, margin: '0 auto' }}>
                             Explore some of the projects I’ve built, ranging from full-stack applications to beautiful landing pages.
                         </p>
+
                     </Col>
                 </Row>
                 <Tab.Container id='projects-tab' defaultActiveKey={tabs[0].key}>
@@ -172,6 +173,11 @@ export default function Project() {
                         {tabs.map(tab => (
                             <Tab.Pane eventKey={tab.key} key={tab.key}>
                                 <Row className="justify-content-center">
+                                    <Col xs={12} className="text-center mb-3">
+                                        <small className="text-muted">
+                                            Hover or click the card below to view or visit the project.
+                                        </small>
+                                    </Col>
                                     <ProjectCard
                                         title={tab.title}
                                         highlights={tab.highlights}
