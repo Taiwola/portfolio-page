@@ -73,16 +73,17 @@ const tabs = [
     {
         key: "fifth",
         label: "Tab 5",
-        title: "Hotel Management Frontend",
+        title: "Unsplash Photo Search App",
         highlights: [
-            "Implemented login and registration using use-hook-form.",
-            "Made use of useContext to make queries and request to the backend.",
-            "Implemented client-side routing using libraries such as React Router to enable navigation between different views and pages within the application.",
-            "Implemented form validation and error handling to provide feedback to users and ensure data integrity when submitting forms, enhancing user experience and reducing errors."
+            "Built with Next.js for fast, modern frontend development.",
+            "Integrated Unsplash API to enable simple and effective photo search functionality.",
+            "Utilized react-query for efficient and optimized API data fetching and caching.",
+            "Designed a clean, responsive UI for seamless user experience.",
+            "Implemented error handling and loading states for robust UX."
         ],
         link: {
-            url: "https://github.com/Taiwola/hotel-booking-frontend",
-            label: "Learn More"
+            url: "https://photo-search-dusky.vercel.app/",
+            label: "Visit Web"
         }
     },
     {
@@ -149,37 +150,40 @@ const tabs = [
 
 export default function Project() {
     return (
-        <section className='project' id="projects">
+        <section className='project' id="projects" style={{ position: 'relative', padding: '60px 0', background: '#151515' }}>
             <Container>
-                <Row>
+                <Row className="mb-4">
                     <Col>
-                        <h2>Project</h2>
-                        <Tab.Container id='projects-tab' defaultActiveKey={tabs[0].key}>
-                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                                {tabs.map(tab => (
-                                    <Nav.Item key={tab.key}>
-                                        <Nav.Link eventKey={tab.key}>{tab.label}</Nav.Link>
-                                    </Nav.Item>
-                                ))}
-                            </Nav>
-                            <Tab.Content>
-                                {tabs.map(tab => (
-                                    <Tab.Pane eventKey={tab.key} key={tab.key}>
-                                        <Row>
-                                            <ProjectCard
-                                                title={tab.title}
-                                                highlights={tab.highlights}
-                                                link={tab.link}
-                                            />
-                                        </Row>
-                                    </Tab.Pane>
-                                ))}
-                            </Tab.Content>
-                        </Tab.Container>
+                        <h2 className="text-center mb-2" style={{ fontWeight: 700, letterSpacing: 1 }}>Projects</h2>
+                        <p className="text-center text-muted mb-4" style={{ maxWidth: 600, margin: '0 auto' }}>
+                            Explore some of the projects I’ve built, ranging from full-stack applications to beautiful landing pages.
+                        </p>
                     </Col>
                 </Row>
+                <Tab.Container id='projects-tab' defaultActiveKey={tabs[0].key}>
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center project-tabs">
+                        {tabs.map(tab => (
+                            <Nav.Item key={tab.key}>
+                                <Nav.Link eventKey={tab.key} className="project-tab-link">{tab.label}</Nav.Link>
+                            </Nav.Item>
+                        ))}
+                    </Nav>
+                    <Tab.Content>
+                        {tabs.map(tab => (
+                            <Tab.Pane eventKey={tab.key} key={tab.key}>
+                                <Row className="justify-content-center">
+                                    <ProjectCard
+                                        title={tab.title}
+                                        highlights={tab.highlights}
+                                        link={tab.link}
+                                    />
+                                </Row>
+                            </Tab.Pane>
+                        ))}
+                    </Tab.Content>
+                </Tab.Container>
             </Container>
-            <img className='background-image-right' src={colorSharp2} alt='img' />
+            <img className='background-image-right' src={colorSharp2} alt='img' style={{ position: 'absolute', right: 0, bottom: 0, width: 250, opacity: 0.15, zIndex: 0 }} />
         </section>
     )
 }
