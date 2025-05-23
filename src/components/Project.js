@@ -1,11 +1,118 @@
 import React from 'react'
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
-import ProjectCard2 from './projectCrd';
 import colorSharp2 from "../assets/img/color-sharp2.png"
-import ProjectCard3 from './projectCard2';
-import ProjectCard4 from './projectCard4';
-import ProjectCard5 from './projectCard5';
+
+const tabs = [
+    {
+        key: "first",
+        label: "Tab 1",
+        title: "Thirenow Remote Job Platform",
+        highlights: [
+            "Redesigned the landing page for improved user engagement and modern aesthetics.",
+            "Developed login and registration pages with enhanced user experience and security.",
+            "Built the dashboard overview page to provide users with a comprehensive summary of their activities.",
+            "Implemented an AI-powered chat box for instant user support and guidance.",
+            "Integrated an AI resume checker to help users optimize their resumes for job applications.",
+            "Created settings and profile pages for personalized user management and customization."
+        ],
+        link: {
+            url: "https://thirenowland.netlify.app",
+            label: "Visit WeB"
+        }
+    },
+    {
+        key: "second",
+        label: "Tab 2",
+        title: "TDA Retail Store",
+        highlights: [
+            "Built the landing page and dashboard using Next.js best practices.",
+            "Implemented Paystack payment gateway for secure and seamless transactions.",
+            "Utilized Next.js Server Actions for efficient API calls and server-side logic.",
+            "Applied modular and reusable component architecture for maintainability.",
+            "Ensured responsive design and optimized performance across devices."
+        ],
+        link: {
+            url: "https://www.tdaretail.com/",
+            label: "Visit Web"
+        }
+    },
+    {
+        key: "third",
+        label: "Tab 3",
+        title: "A Mini-Transaction-App",
+        highlights: [
+            "Implemented secure JWT-based authentication using NestJS and TypeScript.",
+            "Supported diverse user roles, catering to users, their accounts, and administrators.",
+            "Implemented transactions sessions using mongo session.",
+            "Implemented transactions like deposit, withdrawal and between two accounts.",
+            "Implemented robust error handling mechanisms to ensure graceful degradation in case of unexpected failures.",
+            "Implemented data validation and sanitization techniques to prevent injection attacks and ensure data integrity.",
+            "Implemented logging and monitoring functionalities to track system events, detect anomalies, and facilitate troubleshooting.",
+            "Designed and implemented RESTful APIs adhering to best practices for routing, request handling, and response formatting.",
+            "Implemented filtering functionalities for transaction history to enhance user experience and performance."
+        ],
+        link: {
+            url: "https://github.com/Taiwola/learnly-transaction-app",
+            label: "Learn More"
+        }
+    },
+    {
+        key: "fourth",
+        label: "Tab 4",
+        title: "Learning Management System",
+        highlights: [
+            "Implemented secure JWT-based authentication using NestJS and TypeScript.",
+            "Supported diverse user roles, catering to students, instructors, and administrators.",
+            "Implemented the uploading of video and images to an external library.",
+            "Implemented google auth.",
+            "Utilized NestJS and TypeScript for seamless development."
+        ],
+        link: {
+            url: "https://github.com/Taiwola/LMS-PORTAL",
+            label: "Learn More"
+        }
+    },
+    {
+        key: "fifth",
+        label: "Tab 5",
+        title: "Hotel Management Frontend",
+        highlights: [
+            "Implemented login and registration using use-hook-form.",
+            "Made use of useContext to make queries and request to the backend.",
+            "Implemented client-side routing using libraries such as React Router to enable navigation between different views and pages within the application.",
+            "Implemented form validation and error handling to provide feedback to users and ensure data integrity when submitting forms, enhancing user experience and reducing errors."
+        ],
+        link: {
+            url: "https://github.com/Taiwola/hotel-booking-frontend",
+            label: "Learn More"
+        }
+    },
+    {
+        key: "sixth",
+        label: "Tab 6",
+        title: "Hotel Management Frontend",
+        highlights: [
+            "Implemented login and registration using use-hook-form.",
+            "Made use of useContext to make queries and request to the backend.",
+            "Implemented client-side routing using libraries such as React Router to enable navigation between different views and pages within the application.",
+            "ented form validation and error handling to provide feedback to users and ensure data integrity when submitting forms, enhancing user experience and reducing errors."
+        ],
+        link: { url: "https://github.com/Taiwola/hotel-booking-frontend", label: "Learn More" }
+    },
+    {
+        key: "seventh",
+        label: "Tab 7",
+        title: "Yemsay Real Estate Project",
+        highlights: [
+            "Implemented JWT authentication.",
+            "Performed CRUD operations.",
+            "Developed complex query functions.",
+            "Utilized NestJS and TypeScript for seamless development."
+        ],
+        link: { url: "https://github.com/Taiwola/yemsats-V2", label: "Learn More" }
+    }
+];
 
 export default function Project() {
     return (
@@ -14,52 +121,26 @@ export default function Project() {
                 <Row>
                     <Col>
                         <h2>Project</h2>
-
-                        <Tab.Container id='projects-tab' defaultActiveKey="first">
+                        <Tab.Container id='projects-tab' defaultActiveKey={tabs[0].key}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                                <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="fourth">Tab 4</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="fifth">Tab 5</Nav.Link>
-                                </Nav.Item>
+                                {tabs.map(tab => (
+                                    <Nav.Item key={tab.key}>
+                                        <Nav.Link eventKey={tab.key}>{tab.label}</Nav.Link>
+                                    </Nav.Item>
+                                ))}
                             </Nav>
                             <Tab.Content>
-                                <Tab.Pane eventKey="first">
-                                    <Row>
-                                        <ProjectCard />
-
-                                    </Row>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                    <Row>
-                                        <ProjectCard2 />
-                                    </Row>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="third">
-                                    <Row>
-                                        <ProjectCard3 />
-                                    </Row>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="fourth">
-                                    <Row>
-                                        <ProjectCard4 />
-                                    </Row>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="fifth">
-                                    <Row>
-                                        <ProjectCard5 />
-                                    </Row>
-                                </Tab.Pane>
+                                {tabs.map(tab => (
+                                    <Tab.Pane eventKey={tab.key} key={tab.key}>
+                                        <Row>
+                                            <ProjectCard
+                                                title={tab.title}
+                                                highlights={tab.highlights}
+                                                link={tab.link}
+                                            />
+                                        </Row>
+                                    </Tab.Pane>
+                                ))}
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
