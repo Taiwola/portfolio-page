@@ -18,7 +18,7 @@ const tabs = [
         ],
         link: {
             url: "https://thirenowland.netlify.app",
-            label: "Visit WeB"
+            label: "Visit Web"
         }
     },
     {
@@ -40,39 +40,36 @@ const tabs = [
     {
         key: "third",
         label: "Tab 3",
-        title: "A Mini-Transaction-App",
+        title: "Expense Tracker Application",
         highlights: [
-            "Implemented secure JWT-based authentication using NestJS and TypeScript.",
-            "Supported diverse user roles, catering to users, their accounts, and administrators.",
-            "Implemented transactions sessions using mongo session.",
-            "Implemented transactions like deposit, withdrawal and between two accounts.",
-            "Implemented robust error handling mechanisms to ensure graceful degradation in case of unexpected failures.",
-            "Implemented data validation and sanitization techniques to prevent injection attacks and ensure data integrity.",
-            "Implemented logging and monitoring functionalities to track system events, detect anomalies, and facilitate troubleshooting.",
-            "Designed and implemented RESTful APIs adhering to best practices for routing, request handling, and response formatting.",
-            "Implemented filtering functionalities for transaction history to enhance user experience and performance."
+            "Developed both the backend and frontend for a full-stack expense tracker.",
+            "Implemented JWT authentication on both frontend and backend for secure user sessions.",
+            "Designed and built a user-friendly dashboard for tracking expenses and visualizing data.",
+            "Created a modern, responsive landing page to introduce the application.",
+            "Ensured seamless integration between frontend and backend APIs."
         ],
         link: {
-            url: "https://github.com/Taiwola/learnly-transaction-app",
-            label: "Learn More"
+            url: "https://expense-tracker-frontend-inky.vercel.app/",
+            label: "Visit Web"
         }
     },
     {
         key: "fourth",
         label: "Tab 4",
-        title: "Learning Management System",
+        title: "Kemora Landing Page",
         highlights: [
-            "Implemented secure JWT-based authentication using NestJS and TypeScript.",
-            "Supported diverse user roles, catering to students, instructors, and administrators.",
-            "Implemented the uploading of video and images to an external library.",
-            "Implemented google auth.",
-            "Utilized NestJS and TypeScript for seamless development."
+            "Designed and developed a clean, modern landing page.",
+            "Utilized attractive and harmonious color patterns for strong visual appeal.",
+            "Ensured responsive layout for seamless experience across devices.",
+            "Optimized for fast load times and accessibility.",
+            "Implemented modular, reusable components for maintainability."
         ],
         link: {
-            url: "https://github.com/Taiwola/LMS-PORTAL",
-            label: "Learn More"
+            url: "https://kemora.vercel.app/",
+            label: "Visit Web"
         }
     },
+
     {
         key: "fifth",
         label: "Tab 5",
@@ -111,7 +108,43 @@ const tabs = [
             "Utilized NestJS and TypeScript for seamless development."
         ],
         link: { url: "https://github.com/Taiwola/yemsats-V2", label: "Learn More" }
-    }
+    },
+    {
+        key: "eighth",
+        label: "Tab 8",
+        title: "A Mini-Transaction-App",
+        highlights: [
+            "Implemented secure JWT-based authentication using NestJS and TypeScript.",
+            "Supported diverse user roles, catering to users, their accounts, and administrators.",
+            "Implemented transactions sessions using mongo session.",
+            "Implemented transactions like deposit, withdrawal and between two accounts.",
+            "Implemented robust error handling mechanisms to ensure graceful degradation in case of unexpected failures.",
+            "Implemented data validation and sanitization techniques to prevent injection attacks and ensure data integrity.",
+            "Implemented logging and monitoring functionalities to track system events, detect anomalies, and facilitate troubleshooting.",
+            "Designed and implemented RESTful APIs adhering to best practices for routing, request handling, and response formatting.",
+            "Implemented filtering functionalities for transaction history to enhance user experience and performance."
+        ],
+        link: {
+            url: "https://github.com/Taiwola/learnly-transaction-app",
+            label: "Learn More"
+        }
+    },
+    {
+        key: "ninth",
+        label: "Tab 9",
+        title: "Learning Management System",
+        highlights: [
+            "Implemented secure JWT-based authentication using NestJS and TypeScript.",
+            "Supported diverse user roles, catering to students, instructors, and administrators.",
+            "Implemented the uploading of video and images to an external library.",
+            "Implemented google auth.",
+            "Utilized NestJS and TypeScript for seamless development."
+        ],
+        link: {
+            url: "https://github.com/Taiwola/LMS-PORTAL",
+            label: "Learn More"
+        }
+    },
 ];
 
 export default function Project() {
