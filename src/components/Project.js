@@ -162,20 +162,17 @@ export default function Project() {
                     </Col>
                 </Row>
                 <Tab.Container id='projects-tab' defaultActiveKey={tabs[0].key}>
-                    <Nav
-                        variant="pills"
-                        className="nav-pills mb-5 justify-content-center align-items-center project-tabs"
-                        style={{
-                            overflowX: 'auto',
-                            flexWrap: 'nowrap'
-                        }}
-                    >
-                        {tabs.map(tab => (
-                            <Nav.Item key={tab.key} style={{ flex: '0 0 auto' }}>
-                                <Nav.Link eventKey={tab.key} className="project-tab-link">{tab.label}</Nav.Link>
-                            </Nav.Item>
+                    <Row className="gx-3 gy-2 project-tabs-row mb-5 justify-content-center align-items-center">
+                        {tabs.map((tab, idx) => (
+                            <Col xs={6} md={3} key={tab.key} className="mb-2">
+                                <Nav.Item>
+                                    <Nav.Link eventKey={tab.key} className="project-tab-link w-100 text-center">
+                                        {tab.label}
+                                    </Nav.Link>
+                                </Nav.Item>
+                            </Col>
                         ))}
-                    </Nav>
+                    </Row>
                     <Tab.Content>
                         {tabs.map(tab => (
                             <Tab.Pane eventKey={tab.key} key={tab.key}>
